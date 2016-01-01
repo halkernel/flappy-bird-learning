@@ -16,6 +16,7 @@ public class Tube {
     private static final int TUBE_GAP = 140;
     private static final int LOWEST_OPENING = 120;
 
+
     private Texture topTube, bottomTube;
     private Vector2 posTopTube, posBotTube;
     private Rectangle boundsTop, boundsBot;
@@ -59,5 +60,10 @@ public class Tube {
 
     public boolean collides(Rectangle player){
         return player.overlaps(boundsTop) || player.overlaps(boundsBot);
+    }
+
+    public void dispose(){
+        this.bottomTube.dispose();
+        this.topTube.dispose();
     }
 }

@@ -10,7 +10,7 @@ import br.com.flappy.game.FlappyLearningGame;
  * Created by halkernel on 12/30/15.
  */
 public class Bird {
-    private static final int GRAVITY = -50;
+    private static final int GRAVITY = -45;
     private static final int MOVEMENT = 100;
 
     private Vector3 position;
@@ -61,4 +61,7 @@ public class Bird {
         return  this.bounds;
     }
 
+    public void dispose(){
+        bird.dispose();
+    }
 }
